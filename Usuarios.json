@@ -1,0 +1,24 @@
+{
+    "Usuarios": [
+        { "nombre": "Lucas Gómez", "email": "lucas.gomez@mail.com", "telefono": "341-123-4567" },
+        { "nombre": "María Pérez", "email": "maria.perez@mail.com", "telefono": "341-234-5678" },
+        { "nombre": "Juan Rodríguez", "email": "juan.rodriguez@mail.com", "telefono": "341-345-6789" },
+        { "nombre": "Ana Torres", "email": "ana.torres@mail.com", "telefono": "341-456-7890" },
+        { "nombre": "Sofía Díaz", "email": "sofia.diaz@mail.com", "telefono": "341-567-8901" },
+        { "nombre": "Carlos Herrera", "email": "carlos.herrera@mail.com", "telefono": "341-678-9012" },
+        { "nombre": "Julia Ramírez", "email": "julia.ramirez@mail.com", "telefono": "341-789-0123" },
+        { "nombre": "Federico López", "email": "federico.lopez@mail.com", "telefono": "341-890-1234" },
+        { "nombre": "Camila Vargas", "email": "camila.vargas@mail.com", "telefono": "341-901-2345" },
+        { "nombre": "Mateo Ríos", "email": "mateo.rios@mail.com", "telefono": "341-012-3456" },
+        { "nombre": "Valentina Silva", "email": "valentina.silva@mail.com", "telefono": "341-321-4567" },
+        { "nombre": "Tomás Molina", "email": "tomas.molina@mail.com", "telefono": "341-432-5678" },
+        { "nombre": "Martina Suárez", "email": "martina.suarez@mail.com", "telefono": "341-543-6789" },
+        { "nombre": "Agustín Romero", "email": "agustin.romero@mail.com", "telefono": "341-654-7890" },
+        { "nombre": "Florencia Méndez", "email": "florencia.mendez@mail.com", "telefono": "341-765-8901" },
+        { "nombre": "Ignacio Paredes", "email": "ignacio.paredes@mail.com", "telefono": "341-876-9012" },
+        { "nombre": "Emma Figueroa", "email": "emma.figueroa@mail.com", "telefono": "341-987-0123" },
+        { "nombre": "Lautaro Ortega", "email": "lautaro.ortega@mail.com", "telefono": "341-098-1234" },
+        { "nombre": "Catalina Ruiz", "email": "catalina.ruiz@mail.com", "telefono": "341-109-2345" },
+        { "nombre": "Bruno Castro", "email": "bruno.castro@mail.com", "telefono": "341-210-3456" }
+    ]
+}
