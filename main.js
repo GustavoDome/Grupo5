@@ -1,4 +1,4 @@
-let BD = {buscar_usuario,crear_usuario,eliminar_usuario,mostrar_usaurios,email_existe,corregir_nombre} = require("./Base_Datos");
+let BD = {buscar_usuario,crear_usuario,eliminar_usuario,mostrar_usuarios,email_existe,corregir_nombre} = require("./Base_Datos");
 console.log(
   "Ingrese una opción:\n" +
   "1. Agregar usuario\n" +
@@ -17,7 +17,7 @@ async function Opcion_usuario(opcion) {
       break;
 
     case "2":
-      mostrar_usaurios();
+      mostrar_usuarios();
       break;
 
     case "3":
