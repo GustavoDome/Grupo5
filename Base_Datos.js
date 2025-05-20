@@ -1,36 +1,34 @@
 const fs = require('fs');
 const BD = JSON.parse(fs.readFileSync('Usuarios.json', 'utf-8'));
 
-function buscar_usuario(nombre) {
-    let nombre_modificado = nombre.toLowerCase().trim();
-    let usuario = BD.Usuarios.find(usuario => usuario.nombre.toLowerCase().trim() === nombre_modificado);
+function buscar_usuario(telefono) {
+    let usuario = BD.Usuarios.find(usuario => usuario.telefono === telefono);
     if (usuario) {
-        return `Nombre: ${usuario.nombre}\nEmail: ${usuario.email}\nTeléfono: ${usuario.telefono}`;
+        console.log(`Nombre: ${usuario.nombre}\nEmail: ${usuario.email}\nTeléfono: ${usuario.telefono}`);
     } else {
-        return "Usuario no encontrado.";
+        console.log("Usuario no encontrado.");
     }
 }
 
 function crear_usuario(nombre, email, telefono) {
-    nombre = corregir_nombre(nombre);
     if (email_existe(email)) {
-        return "El usuario ya está registrado.";
+        console.log("El usuario ya está registrado.");
     }
-    let nuevoUsuario = {nombre, email, telefono};
+    console.log(nombre, email, telefono);
+    let nuevoUsuario = { nombre, email, telefono };
     BD.Usuarios.push(nuevoUsuario);
     fs.writeFileSync('Usuarios.json', JSON.stringify(BD, null, 2));
-    return "Usuario agregado correctamente"
+    console.log("Usuario agregado correctamente");
 }
 
-function eliminar_usuario(nombre) {
-    let nombre_modificado = nombre.toLowerCase().trim();
-    let index = BD.Usuarios.findIndex(usuario => usuario.nombre.toLowerCase().trim() === nombre_modificado);
+function eliminar_usuario(telefono) {
+    let index = BD.Usuarios.findIndex(usuario => usuario.telefono === telefono);
     if (index !== -1) {
         BD.Usuarios.splice(index, 1);
         fs.writeFileSync('Usuarios.json', JSON.stringify(BD, null, 2));
-        return "Usuario eliminado.";
+        console.log("Usuario eliminado.");
     } else {
-        return "Usuario no encontrado.";
+        console.log("Usuario no encontrado.");
     }
 }
 
@@ -39,19 +37,25 @@ function mostrar_usuarios() {
 }
 
 function email_existe(email) {
-    return BD.Usuarios.some(usuario => usuario.email === email);
+    email = BD.Usuarios.some((usuario) => usuario.email === email);
+    if(email) 
+    {
+        console.log("email existe")
+    } 
+    else 
+    {
+        console.log("email no existe")
+    }
 }
 
-function corregir_nombre(nombre) {
-    let nombre_modificado = nombre.toLowerCase().trim();
-    let usuario = BD.Usuarios.find(usuario => usuario.nombre.toLowerCase().trim() === nombre_modificado);
-
+function corregir_nombre(telefono) {
+    let usuario = BD.Usuarios.find(usuario => usuario.telefono === telefono);
     if (usuario) {
         usuario.nombre = usuario.nombre.trim().replace(/\s+/g, " ");
         fs.writeFileSync('Usuarios.json', JSON.stringify(BD, null, 2));
-        return "Nombre corregido";
+        console.log("Nombre corregido");
     } else {
-        return "Usuario no encontrado.";
+        console.log("Usuario no encontrado.");
     }
 }
 
